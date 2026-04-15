@@ -7,11 +7,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
           lfs: true
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://hudamhmd:$HF_TOKEN@huggingface.co/spaces/hudamhmd/cbc-Diagnosis main
+        run: git push --force https://hudamhmd:$HF_TOKEN@huggingface.co/spaces/CBC-Analysis/cbc_analysis main
